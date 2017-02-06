@@ -55,7 +55,26 @@
                 <span id="hellowoldtype" style="white-space:pre;"></span>
 
             </p>
+            <script>
+                $(function () {
+                    $("#hellowoldtype").typed({
+                        strings: ["Hello World!!!", "Week 5 Assignment is complete!!!", "This is my hello world mini app.", "It displays Hello World and then loops."],
+                        typeSpeed: 75,
+                        backDelay: 500,
+                        loop: true,
+                        loopCount: false,
+                        callback: function () { foo(); },
+                        resetCallback: function () { newTyped(); }
+                    });
+                    $(".reset").click(function () {
+                        $("#hellowoldtype").typed('reset');
+                    });
+                });
+                function newTyped() { /* A new typed object */ }
+                function foo() { console.log("loop back"); }
 
+            </script>
+         
             <!--<p><a class="btn btn-lg btn-success" href="#">Splendid! <span class="glyphicon glyphicon-ok"></span></a></p>-->
         </div>
         <!--<div class="row marketing">
@@ -72,9 +91,9 @@
 
             </div>
         </div>-->
-        <div class="footer">
+        <!--<div class="footer">
             <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
-        </div>
+        </div>-->
     </div>
 
 
